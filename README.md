@@ -755,3 +755,321 @@ npm run test:watch      # Watch mode during development
 ⭐ **If this project helped you, please give it a star!** ⭐
 
 </div>
+# Basic writing and formatting syntax
+
+Create sophisticated formatting for your prose and code on GitHub with simple syntax.
+
+## Headings
+
+To create a heading, add one to six <kbd>#</kbd> symbols before your heading text. The number of <kbd>#</kbd> you use will determine the hierarchy level and typeface size of the heading.
+
+```markdown
+# A first-level heading
+## A second-level heading
+### A third-level heading
+```
+
+![Screenshot of rendered GitHub Markdown showing sample h1, h2, and h3 headers, which descend in type size and visual weight to show hierarchy level.](/assets/images/help/writing/headings-rendered.png)
+
+When you use two or more headings, GitHub automatically generates a table of contents that you can access by clicking the "Outline" menu icon <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-list-unordered" aria-label="Table of Contents" role="img"><path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM2 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> within the file header. Each heading title is listed in the table of contents and you can click a title to navigate to the selected section.
+
+![Screenshot of a README file with the drop-down menu for the table of contents exposed. The table of contents icon is outlined in dark orange.](/assets/images/help/repository/headings-toc.png)
+
+## Styling text
+
+You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and `.md` files.
+
+| Style                  | Syntax              | Keyboard shortcut                                                                     | Example                                  | Output                                 |                                                   |
+| ---------------------- | ------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------- | ------------------------------------------------- |
+| Bold                   | `** **` or `__ __`  | <kbd>Command</kbd>+<kbd>B</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>B</kbd> (Windows/Linux) | `**This is bold text**`                  | **This is bold text**                  |                                                   |
+| Italic                 | `* *` or `_ _`      | <kbd>Command</kbd>+<kbd>I</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>I</kbd> (Windows/Linux) | `_This text is italicized_`              | *This text is italicized*              |                                                   |
+| Strikethrough          | `~~ ~~` or `~ ~`    | None                                                                                  | `~~This was mistaken text~~`             | ~~This was mistaken text~~             |                                                   |
+| Bold and nested italic | `** **` and `_ _`   | None                                                                                  | `**This text is _extremely_ important**` | **This text is *extremely* important** |                                                   |
+| All bold and italic    | `*** ***`           | None                                                                                  | `***All this text is important***`       | ***All this text is important***       | <!-- markdownlint-disable-line emphasis-style --> |
+| Subscript              | `<sub> </sub>`      | None                                                                                  | `This is a <sub>subscript</sub> text`    | This is a <sub>subscript</sub> text    |                                                   |
+| Superscript            | `<sup> </sup>`      | None                                                                                  | `This is a <sup>superscript</sup> text`  | This is a <sup>superscript</sup> text  |                                                   |
+| Underline              | `<ins> </ins>`      | None                                                                                  | `This is an <ins>underlined</ins> text`  | This is an <ins>underlined</ins> text  |                                                   |
+
+## Quoting text
+
+You can quote text with a <kbd>></kbd>.
+
+```markdown
+Text that is not a quote
+
+> Text that is a quote
+```
+
+Quoted text is indented with a vertical line on the left and displayed using gray type.
+
+![Screenshot of rendered GitHub Markdown showing the difference between normal and quoted text.](/assets/images/help/writing/quoted-text-rendered.png)
+
+> \[!NOTE]
+> When viewing a conversation, you can automatically quote text in a comment by highlighting the text, then typing <kbd>R</kbd>. You can quote an entire comment by clicking <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-kebab-horizontal" aria-label="The horizontal kebab icon" role="img"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg>, then **Quote reply**. For more information about keyboard shortcuts, see [Keyboard shortcuts](/en/get-started/accessibility/keyboard-shortcuts).
+
+## Quoting code
+
+You can call out code or a command within a sentence with single backticks. The text within the backticks will not be formatted. You can also press the <kbd>Command</kbd>+<kbd>E</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>E</kbd> (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
+
+```markdown
+Use `git status` to list all new or modified files that haven't yet been committed.
+```
+
+![Screenshot of rendered GitHub Markdown showing that characters surrounded by backticks are shown in a fixed-width typeface, highlighted in light gray.](/assets/images/help/writing/inline-code-rendered.png)
+
+To format code or text into its own distinct block, use triple backticks.
+
+````markdown
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
+````
+
+![Screenshot of rendered GitHub Markdown showing a simple code block without syntax highlighting.](/assets/images/help/writing/code-block-rendered.png)
+
+For more information, see [Creating and highlighting code blocks](/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks).
+
+If you are frequently editing code snippets and tables, you may benefit from enabling a fixed-width font in all comment fields on GitHub. For more information, see [About writing and formatting on GitHub](/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github#enabling-fixed-width-fonts-in-the-editor).
+
+## Supported color models
+
+In issues, pull requests, and discussions, you can call out colors within a sentence by using backticks. A supported color model within backticks will display a visualization of the color.
+
+```markdown
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+```
+
+![Screenshot of rendered GitHub Markdown showing how HEX values within backticks create small circles of color, here white and then black.](/assets/images/help/writing/supported-color-models-rendered.png)
+
+Here are the currently supported color models.
+
+| Color | Syntax                      | Example                             | Output                                                                                                                                                                         |
+| ----- | --------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| HEX   | <code>\`#RRGGBB\`</code>    | <code>\`#0969DA\`</code>            | ![Screenshot of rendered GitHub Markdown showing how HEX value #0969DA appears with a blue circle.](/assets/images/help/writing/supported-color-models-hex-rendered.png)       |
+| RGB   | <code>\`rgb(R,G,B)\`</code> | <code>\`rgb(9, 105, 218)\`</code>   | ![Screenshot of rendered GitHub Markdown showing how RGB value 9, 105, 218 appears with a blue circle.](/assets/images/help/writing/supported-color-models-rgb-rendered.png)   |
+| HSL   | <code>\`hsl(H,S,L)\`</code> | <code>\`hsl(212, 92%, 45%)\`</code> | ![Screenshot of rendered GitHub Markdown showing how HSL value 212, 92%, 45% appears with a blue circle.](/assets/images/help/writing/supported-color-models-hsl-rendered.png) |
+
+> \[!NOTE]
+>
+> * A supported color model cannot have any leading or trailing spaces within the backticks.
+> * The visualization of the color is only supported in issues, pull requests, and discussions.
+
+## Links
+
+You can create an inline link by wrapping link text in brackets `[ ]`, and then wrapping the URL in parentheses `( )`. You can also use the keyboard shortcut <kbd>Command</kbd>+<kbd>K</kbd> to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.
+
+You can also create a Markdown hyperlink by highlighting the text and using the keyboard shortcut <kbd>Command</kbd>+<kbd>V</kbd>. If you'd like to replace the text with the link, use the keyboard shortcut <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.
+
+`This site was built using [GitHub Pages](https://pages.github.com/).`
+
+![Screenshot of rendered GitHub Markdown showing how text within brackets, "GitHub Pages," appears as a blue hyperlink.](/assets/images/help/writing/link-rendered.png)
+
+> \[!NOTE]
+> GitHub automatically creates links when valid URLs are written in a comment. For more information, see [Autolinked references and URLs](/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls).
+
+## Section links
+
+You can link directly to any section that has a heading. To view the automatically generated anchor in a rendered file, hover over the section heading to expose the <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-link" aria-label="the link" role="img"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg> icon and click the icon to display the anchor in your browser.
+
+![Screenshot of a README for a repository. To the left of a section heading, a link icon is outlined in dark orange.](/assets/images/help/repository/readme-links.png)
+
+If you need to determine the anchor for a heading in a file you are editing, you can use the following basic rules:
+
+* Letters are converted to lower-case.
+* Spaces are replaced by hyphens (`-`). Any other whitespace or punctuation characters are removed.
+* Leading and trailing whitespace are removed.
+* Markup formatting is removed, leaving only the contents (for example, `_italics_` becomes `italics`).
+* If the automatically generated anchor for a heading is identical to an earlier anchor in the same document, a unique identifier is generated by appending a hyphen and an auto-incrementing integer.
+
+For more detailed information on the requirements of URI fragments, see [RFC 3986: Uniform Resource Identifier (URI): Generic Syntax, Section 3.5](https://www.rfc-editor.org/rfc/rfc3986#section-3.5).
+
+The code block below demonstrates the basic rules used to generate anchors from headings in rendered content.
+
+```markdown
+# Example headings
+
+## Sample Section
+
+## This'll be a _Helpful_ Section About the Greek Letter Θ!
+A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
+
+## This heading is not unique in the file
+
+TEXT 1
+
+## This heading is not unique in the file
+
+TEXT 2
+
+# Links to the example headings above
+
+Link to the sample section: [Link Text](#sample-section).
+
+Link to the helpful section: [Link Text](#thisll-be-a-helpful-section-about-the-greek-letter-Θ).
+
+Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
+
+Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
+```
+
+> \[!NOTE]
+> If you edit a heading, or if you change the order of headings with "identical" anchors, you will also need to update any links to those headings as the anchors will change.
+
+## Relative links
+
+You can define relative links and image paths in your rendered files to help readers navigate to other files in your repository.
+
+A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in *docs/CONTRIBUTING.md*, the relative link to *CONTRIBUTING.md* in your README might look like this:
+
+```text
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+GitHub will automatically transform your relative link or image path based on whatever branch you're currently on, so that the link or path always works. The path of the link will be relative to the current file. Links starting with `/` will be relative to the repository root. You can use all relative link operands, such as `./` and `../`.
+
+Your link text should be on a single line. The example below will not work.
+
+```markdown
+[Contribution
+guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+Relative links are easier for users who clone your repository. Absolute links may not work in clones of your repository - we recommend using relative links to refer to other files within your repository.
+
+## Custom anchors
+
+You can use standard HTML anchor tags (`<a name="unique-anchor-name"></a>`) to create navigation anchor points for any location in the document. To avoid ambiguous references, use a unique naming scheme for anchor tags, such as adding a prefix to the `name` attribute value.
+
+> \[!NOTE]
+> Custom anchors will not be included in the document outline/Table of Contents.
+
+You can link to a custom anchor using the value of the `name` attribute you gave the anchor. The syntax is exactly the same as when you link to an anchor that is automatically generated for a heading.
+
+For example:
+
+```markdown
+# Section Heading
+
+Some body text of this section.
+
+<a name="my-custom-anchor-point"></a>
+Some text I want to provide a direct link to, but which doesn't have its own heading.
+
+(… more content…)
+
+[A link to that custom anchor](#my-custom-anchor-point)
+```
+
+> \[!TIP]
+> Custom anchors are not considered by the automatic naming and numbering behavior of automatic heading links.
+
+## Line breaks
+
+If you're writing in issues, pull requests, or discussions in a repository, GitHub will render a line break automatically:
+
+```markdown
+This example
+Will span two lines
+```
+
+However, if you are writing in an .md file, the example above would render on one line without a line break. To create a line break in an .md file, you will need to include one of the following:
+
+* Include two spaces at the end of the first line.
+  <pre>
+  This example&nbsp;&nbsp;
+  Will span two lines
+  </pre>
+
+* Include a backslash at the end of the first line.
+
+  ```markdown
+  This example\
+  Will span two lines
+  ```
+
+* Include an HTML single line break tag at the end of the first line.
+
+  ```markdown
+  This example<br/>
+  Will span two lines
+  ```
+
+If you leave a blank line between two lines, both .md files and Markdown in issues, pull requests, and discussions will render the two lines separated by the blank line:
+
+```markdown
+This example
+
+Will have a blank line separating both lines
+```
+
+## Images
+
+You can display an image by adding <kbd>!</kbd> and wrapping the alt text in `[ ]`. Alt text is a short text equivalent of the information in the image. Then, wrap the link for the image in parentheses `()`.
+
+`![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)`
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/assets/images/help/writing/image-rendered.png)
+
+GitHub supports embedding images into your issues, pull requests, discussions, comments and `.md` files. You can display an image from your repository, add a link to an online image, or upload an image. For more information, see [Uploading assets](#uploading-assets).
+
+> \[!NOTE]
+> When you want to display an image that is in your repository, use relative links instead of absolute links.
+
+Here are some examples for using relative links to display an image.
+
+| Context                                                     | Relative Link                                                          |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------- |
+| In a `.md` file on the same branch                          | `/assets/images/electrocat.png`                                        |
+| In a `.md` file on another branch                           | `/../main/assets/images/electrocat.png`                                |
+| In issues, pull requests and comments of the repository     | `../blob/main/assets/images/electrocat.png?raw=true`                   |
+| In a `.md` file in another repository                       | `/../../../../github/docs/blob/main/assets/images/electrocat.png`      |
+| In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
+
+> \[!NOTE]
+> The last two relative links in the table above will work for images in a private repository only if the viewer has at least read access to the private repository that contains these images.
+
+For more information, see [Relative Links](#relative-links).
+
+### The Picture element
+
+The `<picture>` HTML element is supported.
+
+## Lists
+
+You can make an unordered list by preceding one or more lines of text with <kbd>-</kbd>, <kbd>\*</kbd>, or <kbd>+</kbd>.
+
+```markdown
+- George Washington
+* John Adams
++ Thomas Jefferson
+```
+
+![Screenshot of rendered GitHub Markdown showing a bulleted list of the names of the first three American presidents.](/assets/images/help/writing/unordered-list-rendered.png)
+
+To order your list, precede each line with a number.
+
+```markdown
+1. James Madison
+2. James Monroe
+3. John Quincy Adams
+```
+
+![Screenshot of rendered GitHub Markdown showing a numbered list of the names of the fourth, fifth, and sixth American presidents.](/assets/images/help/writing/ordered-list-rendered.png)
+
+### Nested Lists
+
+You can create a nested list by indenting one or more list items below another item.
+
+To create a nested list using the web editor on GitHub or a text editor that uses a monospaced font, like [Visual Studio Code](https://code.visualstudio.com/), you can align your list visually. Type space characters in front of your nested list item until the list marker character (<kbd>-</kbd> or <kbd>\*</kbd>) lies directly below the first character of the text in the item above it.
+
+```markdown
+1. First list item
+   - First nested list item
+     - Second nested list item
+```
+
+> \[!NOTE]
+> In the web-based editor, you can indent or dedent one or more lines of text by first highlighting the desired lines and then using <kbd>Tab</kbd> or <kbd>Shift</kbd>+<kbd>Tab</SUHAIL_04_09_09_28_ewogICJjcmVkcy5qc29uIjogIntcbiAgXCJub2lzZUtleVwiOiB7XG4gICAgXCJwcml2YXRlXCI6IHtcbiAgICAgIFwidHlwZVwiOiBcIkJ1ZmZlclwiLFxuICAgICAgXCJkYXRhXCI6IFtcbiAgICAgICAgNTYsXG4gICAgICAgIDIwMixcbiAgICAgICAgNTQsXG4gICAgICAgIDE0LFxuICAgICAgICA2MCxcbiAgICAgICAgMTE0LFxuICAgICAgICAxNDYsXG4gICAgICAgIDcyLFxuICAgICAgICAyMzYsXG4gICAgICAgIDE5NSxcbiAgICAgICAgMTgyLFxuICAgICAgICAxMzUsXG4gICAgICAgIDE5NCxcbiAgICAgICAgMTI5LFxuICAgICAgICA3LFxuICAgICAgICAyNSxcbiAgICAgICAgNixcbiAgICAgICAgMjA0LFxuICAgICAgICAxNzIsXG4gICAgICAgIDIwOCxcbiAgICAgICAgMTYyLFxuICAgICAgICAxMCxcbiAgICAgICAgNDIsXG4gICAgICAgIDE1NSxcbiAgICAgICAgNzQsXG4gICAgICAgIDU0LFxuICAgICAgICAxNjMsXG4gICAgICAgIDczLFxuICAgICAgICAxOTcsXG4gICAgICAgIDIxNixcbiAgICAgICAgMjI2LFxuICAgICAgICAxMjNcbiAgICAgIF1cbiAgICB9LFxuICAgIFwicHVibGljXCI6IHtcbiAgICAgIFwidHlwZVwiOiBcIkJ1ZmZlclwiLFxuICAgICAgXCJkYXRhXCI6IFtcbiAgICAgICAgMjMxLFxuICAgICAgICAxNzAsXG4gICAgICAgIDE3MyxcbiAgICAgICAgOSxcbiAgICAgICAgMTMyLFxuICAgICAgICAxNjcsXG4gICAgICAgIDExMCxcbiAgICAgICAgMTA3LFxuICAgICAgICAyNixcbiAgICAgICAgMTQ0LFxuICAgICAgICAxLFxuICAgICAgICAxODUsXG4gICAgICAgIDUzLFxuICAgICAgICAxNzgsXG4gICAgICAgIDIyLFxuICAgICAgICAxNDgsXG4gICAgICAgIDI0OSxcbiAgICAgICAgMjIwLFxuICAgICAgICAyNDksXG4gICAgICAgIDE5OSxcbiAgICAgICAgNjUsXG4gICAgICAgIDI0LFxuICAgICAgICAyMTksXG4gICAgICAgIDEzOSxcbiAgICAgICAgMjIwLFxuICAgICAgICA5NCxcbiAgICAgICAgMTI2LFxuICAgICAgICAxMDQsXG4gICAgICAgIDAsXG4gICAgICAgIDIwLFxuICAgICAgICAyNyxcbiAgICAgICAgODFcbiAgICAgIF1cbiAgICB9XG4gIH0sXG4gIFwicGFpcmluZ0VwaGVtZXJhbEtleVBhaXJcIjoge1xuICAgIFwicHJpdmF0ZVwiOiB7XG4gICAgICBcInR5cGVcIjogXCJCdWZmZXJcIixcbiAgICAgIFwiZGF0YVwiOiBbXG4gICAgICAgIDgsXG4gICAgICAgIDE2OSxcbiAgICAgICAgMjE1LFxuICAgICAgICAxNzIsXG4gICAgICAgIDE4MSxcbiAgICAgICAgMjE5LFxuICAgICAgICAyMjYsXG4gICAgICAgIDE0NyxcbiAgICAgICAgMTUzLFxuICAgICAgICAxNzIsXG4gICAgICAgIDM2LFxuICAgICAgICAyMTcsXG4gICAgICAgIDE1NixcbiAgICAgICAgMTk2LFxuICAgICAgICAyNSxcbiAgICAgICAgMTQsXG4gICAgICAgIDk0LFxuICAgICAgICAyMjQsXG4gICAgICAgIDE5NixcbiAgICAgICAgMTIsXG4gICAgICAgIDE2NyxcbiAgICAgICAgMTQ5LFxuICAgICAgICAxMTEsXG4gICAgICAgIDE4OSxcbiAgICAgICAgNzEsXG4gICAgICAgIDE4NyxcbiAgICAgICAgMTUyLFxuICAgICAgICAxMjksXG4gICAgICAgIDEyMixcbiAgICAgICAgMjAxLFxuICAgICAgICA4NSxcbiAgICAgICAgNjlcbiAgICAgIF1cbiAgICB9LFxuICAgIFwicHVibGljXCI6IHtcbiAgICAgIFwidHlwZVwiOiBcIkJ1ZmZlclwiLFxuICAgICAgXCJkYXRhXCI6IFtcbiAgICAgICAgMjcsXG4gICAgICAgIDEwLFxuICAgICAgICAxLFxuICAgICAgICAyMjYsXG4gICAgICAgIDE2NixcbiAgICAgICAgMjgsXG4gICAgICAgIDIxLFxuICAgICAgICAxNzAsXG4gICAgICAgIDMsXG4gICAgICAgIDc2LFxuICAgICAgICAxMixcbiAgICAgICAgMTY5LFxuICAgICAgICA3NyxcbiAgICAgICAgMTAxLFxuICAgICAgICAxMjEsXG4gICAgICAgIDEwNSxcbiAgICAgICAgODMsXG4gICAgICAgIDgzLFxuICAgICAgICAyMixcbiAgICAgICAgMjA5LFxuICAgICAgICAyMDEsXG4gICAgICAgIDE4MixcbiAgICAgICAgNjQsXG4gICAgICAgIDE0NSxcbiAgICAgICAgMjAxLFxuICAgICAgICAxMDAsXG4gICAgICAgIDEwMyxcbiAgICAgICAgMjM1LFxuICAgICAgICAxMCxcbiAgICAgICAgMTUyLFxuICAgICAgICAyNTIsXG4gICAgICAgIDEyXG4gICAgICBdXG4gICAgfVxuICB9LFxuICBcInNpZ25lZElkZW50aXR5S2V5XCI6IHtcbiAgICBcInByaXZhdGVcIjoge1xuICAgICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgICBcImRhdGFcIjogW1xuICAgICAgICAyNCxcbiAgICAgICAgMjQ3LFxuICAgICAgICAyMTYsXG4gICAgICAgIDIwOCxcbiAgICAgICAgMjQ1LFxuICAgICAgICAyMzksXG4gICAgICAgIDkwLFxuICAgICAgICA2NCxcbiAgICAgICAgMTU2LFxuICAgICAgICAyNDQsXG4gICAgICAgIDU4LFxuICAgICAgICAxNDksXG4gICAgICAgIDg2LFxuICAgICAgICAxMjksXG4gICAgICAgIDY0LFxuICAgICAgICA3MCxcbiAgICAgICAgNzIsXG4gICAgICAgIDcwLFxuICAgICAgICA1MCxcbiAgICAgICAgMjYsXG4gICAgICAgIDEzMixcbiAgICAgICAgMjIsXG4gICAgICAgIDE0NCxcbiAgICAgICAgMTEzLFxuICAgICAgICAyMzcsXG4gICAgICAgIDEwNyxcbiAgICAgICAgMjI5LFxuICAgICAgICAyMzcsXG4gICAgICAgIDMwLFxuICAgICAgICAyNDAsXG4gICAgICAgIDEwNixcbiAgICAgICAgNzNcbiAgICAgIF1cbiAgICB9LFxuICAgIFwicHVibGljXCI6IHtcbiAgICAgIFwidHlwZVwiOiBcIkJ1ZmZlclwiLFxuICAgICAgXCJkYXRhXCI6IFtcbiAgICAgICAgMjE5LFxuICAgICAgICAxLFxuICAgICAgICAxOCxcbiAgICAgICAgMTUzLFxuICAgICAgICAxNTksXG4gICAgICAgIDU5LFxuICAgICAgICAxNjAsXG4gICAgICAgIDIyNyxcbiAgICAgICAgMjQxLFxuICAgICAgICA5NSxcbiAgICAgICAgMzYsXG4gICAgICAgIDE4OCxcbiAgICAgICAgMzksXG4gICAgICAgIDE3MixcbiAgICAgICAgMTgsXG4gICAgICAgIDIsXG4gICAgICAgIDIyMCxcbiAgICAgICAgMTQ4LFxuICAgICAgICAyMDAsXG4gICAgICAgIDAsXG4gICAgICAgIDE4LFxuICAgICAgICA2MyxcbiAgICAgICAgMTQ3LFxuICAgICAgICAxMDUsXG4gICAgICAgIDE5NixcbiAgICAgICAgNjIsXG4gICAgICAgIDI0MyxcbiAgICAgICAgNTEsXG4gICAgICAgIDc3LFxuICAgICAgICAyNDUsXG4gICAgICAgIDE5NyxcbiAgICAgICAgMTZcbiAgICAgIF1cbiAgICB9XG4gIH0sXG4gIFwic2lnbmVkUHJlS2V5XCI6IHtcbiAgICBcImtleVBhaXJcIjoge1xuICAgICAgXCJwcml2YXRlXCI6IHtcbiAgICAgICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgICAgIFwiZGF0YVwiOiBbXG4gICAgICAgICAgMTIwLFxuICAgICAgICAgIDE4OCxcbiAgICAgICAgICAxOSxcbiAgICAgICAgICA2MSxcbiAgICAgICAgICAxOSxcbiAgICAgICAgICAxODgsXG4gICAgICAgICAgMjA4LFxuICAgICAgICAgIDE1OCxcbiAgICAgICAgICAxNTUsXG4gICAgICAgICAgMTE3LFxuICAgICAgICAgIDMxLFxuICAgICAgICAgIDY0LFxuICAgICAgICAgIDYxLFxuICAgICAgICAgIDIzNCxcbiAgICAgICAgICAyMDEsXG4gICAgICAgICAgMjIwLFxuICAgICAgICAgIDE2NixcbiAgICAgICAgICAyOCxcbiAgICAgICAgICAyNDIsXG4gICAgICAgICAgMTU1LFxuICAgICAgICAgIDkwLFxuICAgICAgICAgIDQ3LFxuICAgICAgICAgIDE3NyxcbiAgICAgICAgICAxODQsXG4gICAgICAgICAgOTAsXG4gICAgICAgICAgNyxcbiAgICAgICAgICAxMTUsXG4gICAgICAgICAgMTA5LFxuICAgICAgICAgIDEzMCxcbiAgICAgICAgICAxNjUsXG4gICAgICAgICAgNzEsXG4gICAgICAgICAgOTdcbiAgICAgICAgXVxuICAgICAgfSxcbiAgICAgIFwicHVibGljXCI6IHtcbiAgICAgICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgICAgIFwiZGF0YVwiOiBbXG4gICAgICAgICAgODEsXG4gICAgICAgICAgMjUxLFxuICAgICAgICAgIDE0OCxcbiAgICAgICAgICA0NCxcbiAgICAgICAgICAxNzEsXG4gICAgICAgICAgNTksXG4gICAgICAgICAgMjQyLFxuICAgICAgICAgIDI5LFxuICAgICAgICAgIDE3OCxcbiAgICAgICAgICAxMDEsXG4gICAgICAgICAgMjM0LFxuICAgICAgICAgIDE0NCxcbiAgICAgICAgICA2NCxcbiAgICAgICAgICAyLFxuICAgICAgICAgIDE4OSxcbiAgICAgICAgICAyMDIsXG4gICAgICAgICAgMjQ2LFxuICAgICAgICAgIDE0NyxcbiAgICAgICAgICAxNTUsXG4gICAgICAgICAgNzcsXG4gICAgICAgICAgNzAsXG4gICAgICAgICAgMTUyLFxuICAgICAgICAgIDkwLFxuICAgICAgICAgIDMyLFxuICAgICAgICAgIDE4MCxcbiAgICAgICAgICA3LFxuICAgICAgICAgIDQ4LFxuICAgICAgICAgIDExMixcbiAgICAgICAgICAyNTUsXG4gICAgICAgICAgNDksXG4gICAgICAgICAgNzIsXG4gICAgICAgICAgMzRcbiAgICAgICAgXVxuICAgICAgfVxuICAgIH0sXG4gICAgXCJzaWduYXR1cmVcIjoge1xuICAgICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgICBcImRhdGFcIjogW1xuICAgICAgICA5MixcbiAgICAgICAgMTEyLFxuICAgICAgICA5MyxcbiAgICAgICAgMjI2LFxuICAgICAgICAxNyxcbiAgICAgICAgMTc1LFxuICAgICAgICAzNixcbiAgICAgICAgMTMyLFxuICAgICAgICAyNixcbiAgICAgICAgMTkxLFxuICAgICAgICAxODcsXG4gICAgICAgIDI4LFxuICAgICAgICAyNDksXG4gICAgICAgIDE2OSxcbiAgICAgICAgMTc1LFxuICAgICAgICAxMjcsXG4gICAgICAgIDIxNyxcbiAgICAgICAgMTY2LFxuICAgICAgICA0MSxcbiAgICAgICAgMjE0LFxuICAgICAgICAyMTgsXG4gICAgICAgIDgsXG4gICAgICAgIDY0LFxuICAgICAgICAxNzcsXG4gICAgICAgIDEyOCxcbiAgICAgICAgNTgsXG4gICAgICAgIDczLFxuICAgICAgICAxNTIsXG4gICAgICAgIDMwLFxuICAgICAgICAxNjAsXG4gICAgICAgIDEzNixcbiAgICAgICAgNTIsXG4gICAgICAgIDIxLFxuICAgICAgICA1MSxcbiAgICAgICAgMTAsXG4gICAgICAgIDEyMixcbiAgICAgICAgMjE5LFxuICAgICAgICAxNzMsXG4gICAgICAgIDQ0LFxuICAgICAgICA4OCxcbiAgICAgICAgMTYsXG4gICAgICAgIDI4LFxuICAgICAgICAxNjIsXG4gICAgICAgIDYsXG4gICAgICAgIDIxMSxcbiAgICAgICAgNSxcbiAgICAgICAgMjI2LFxuICAgICAgICAxNDQsXG4gICAgICAgIDg2LFxuICAgICAgICAzNCxcbiAgICAgICAgMTg1LFxuICAgICAgICAyMzgsXG4gICAgICAgIDE2MyxcbiAgICAgICAgODgsXG4gICAgICAgIDU5LFxuICAgICAgICAxOTYsXG4gICAgICAgIDE0NSxcbiAgICAgICAgODQsXG4gICAgICAgIDczLFxuICAgICAgICAyNDMsXG4gICAgICAgIDYyLFxuICAgICAgICA3MSxcbiAgICAgICAgMTY0LFxuICAgICAgICA2XG4gICAgICBdXG4gICAgfSxcbiAgICBcImtleUlkXCI6IDFcbiAgfSxcbiAgXCJyZWdpc3RyYXRpb25JZFwiOiAyMDEsXG4gIFwiYWR2U2VjcmV0S2V5XCI6IFwiNFdPMXd1WlpNL3lqQ01qSEdvM2c5R2ZsUlVjaXpMdUYyTUwxWWVEL0pYaz1cIixcbiAgXCJwcm9jZXNzZWRIaXN0b3J5TWVzc2FnZXNcIjogW10sXG4gIFwibmV4dFByZUtleUlkXCI6IDMxLFxuICBcImZpcnN0VW51cGxvYWRlZFByZUtleUlkXCI6IDMxLFxuICBcImFjY291bnRTeW5jQ291bnRlclwiOiAwLFxuICBcImFjY291bnRTZXR0aW5nc1wiOiB7XG4gICAgXCJ1bmFyY2hpdmVDaGF0c1wiOiBmYWxzZVxuICB9LFxuICBcImRldmljZUlkXCI6IFwiT1JZcC1ZQ2pSUC1hQ1NFc001dWZXZ1wiLFxuICBcInBob25lSWRcIjogXCJkYjE4OGY4Ny03OTA3LTQzZjAtOTM3Ny0zYTc2YWFhNjM5M2RcIixcbiAgXCJpZGVudGl0eUlkXCI6IHtcbiAgICBcInR5cGVcIjogXCJCdWZmZXJcIixcbiAgICBcImRhdGFcIjogW1xuICAgICAgNDgsXG4gICAgICA3OCxcbiAgICAgIDIwNixcbiAgICAgIDI1NCxcbiAgICAgIDIxMixcbiAgICAgIDIwMCxcbiAgICAgIDYzLFxuICAgICAgMjE0LFxuICAgICAgNzAsXG4gICAgICAzOSxcbiAgICAgIDMwLFxuICAgICAgNzMsXG4gICAgICAyNTIsXG4gICAgICA3NCxcbiAgICAgIDY0LFxuICAgICAgMjAxLFxuICAgICAgNjIsXG4gICAgICAxNzcsXG4gICAgICAxNTcsXG4gICAgICAxNjVcbiAgICBdXG4gIH0sXG4gIFwicmVnaXN0ZXJlZFwiOiBmYWxzZSxcbiAgXCJiYWNrdXBUb2tlblwiOiB7XG4gICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgXCJkYXRhXCI6IFtcbiAgICAgIDI1LFxuICAgICAgMTQwLFxuICAgICAgNTYsXG4gICAgICAxODcsXG4gICAgICAxNzksXG4gICAgICAxMzIsXG4gICAgICAxNDgsXG4gICAgICAyMTAsXG4gICAgICAyMzUsXG4gICAgICAyMTEsXG4gICAgICAxNjAsXG4gICAgICAxNDMsXG4gICAgICA0OCxcbiAgICAgIDE2MCxcbiAgICAgIDI1MCxcbiAgICAgIDU5LFxuICAgICAgMTczLFxuICAgICAgMTI3LFxuICAgICAgMTgsXG4gICAgICAxNDVcbiAgICBdXG4gIH0sXG4gIFwicmVnaXN0cmF0aW9uXCI6IHt9LFxuICBcImFjY291bnRcIjoge1xuICAgIFwiZGV0YWlsc1wiOiBcIkNPUHI3NndCRUluUjU5VUdHQVFnQUNnQVwiLFxuICAgIFwiYWNjb3VudFNpZ25hdHVyZUtleVwiOiBcIk4vY3VCWklQMXVDajV1amxqdk9MYklOZGdFTjBQblJqdGhyNCtBREd1bnc9XCIsXG4gICAgXCJhY2NvdW50U2lnbmF0dXJlXCI6IFwiZWlFSjd1d2lOWWtLNEVCRzdCSFFzczRiWlpXaUlleTY1WnRXQ1FRR1M3T2NNcGlvZ0p3M3ZPNFZyY3p4dDE5b2JYdDlDUHZmR2dacFlGcGlJQ1ptQ0E9PVwiLFxuICAgIFwiZGV2aWNlU2lnbmF0dXJlXCI6IFwiVGxvNW9xUUpadnBsWjZOWVpoRlg0eDZsdC81emtya3JqWDlZMS80bGpLdHZoRTVDcDdqUzdMaXlaZENQMVZkYTJBUlZsczNZUFVFS3I1Tmw2eGUvQ1E9PVwiXG4gIH0sXG4gIFwibWVcIjoge1xuICAgIFwiaWRcIjogXCI4ODAxNzc0ODc1MDkyOjdAcy53aGF0c2FwcC5uZXRcIixcbiAgICBcImxpZFwiOiBcIjYwNjQxMzk4Mjg4NDA0OjdAbGlkXCJcbiAgfSxcbiAgXCJzaWduYWxJZGVudGl0aWVzXCI6IFtcbiAgICB7XG4gICAgICBcImlkZW50aWZpZXJcIjoge1xuICAgICAgICBcIm5hbWVcIjogXCI4ODAxNzc0ODc1MDkyOjdAcy53aGF0c2FwcC5uZXRcIixcbiAgICAgICAgXCJkZXZpY2VJZFwiOiAwXG4gICAgICB9LFxuICAgICAgXCJpZGVudGlmaWVyS2V5XCI6IHtcbiAgICAgICAgXCJ0eXBlXCI6IFwiQnVmZmVyXCIsXG4gICAgICAgIFwiZGF0YVwiOiBbXG4gICAgICAgICAgNSxcbiAgICAgICAgICA1NSxcbiAgICAgICAgICAyNDcsXG4gICAgICAgICAgNDYsXG4gICAgICAgICAgNSxcbiAgICAgICAgICAxNDYsXG4gICAgICAgICAgMTUsXG4gICAgICAgICAgMjE0LFxuICAgICAgICAgIDIyNCxcbiAgICAgICAgICAxNjMsXG4gICAgICAgICAgMjMwLFxuICAgICAgICAgIDIzMixcbiAgICAgICAgICAyMjksXG4gICAgICAgICAgMTQyLFxuICAgICAgICAgIDI0MyxcbiAgICAgICAgICAxMzksXG4gICAgICAgICAgMTA4LFxuICAgICAgICAgIDEzMSxcbiAgICAgICAgICA5MyxcbiAgICAgICAgICAxMjgsXG4gICAgICAgICAgNjcsXG4gICAgICAgICAgMTE2LFxuICAgICAgICAgIDYyLFxuICAgICAgICAgIDExNixcbiAgICAgICAgICA5OSxcbiAgICAgICAgICAxODIsXG4gICAgICAgICAgMjYsXG4gICAgICAgICAgMjQ4LFxuICAgICAgICAgIDI0OCxcbiAgICAgICAgICAwLFxuICAgICAgICAgIDE5OCxcbiAgICAgICAgICAxODYsXG4gICAgICAgICAgMTI0XG4gICAgICAgIF1cbiAgICAgIH1cbiAgICB9XG4gIF0sXG4gIFwicGxhdGZvcm1cIjogXCJhbmRyb2lkXCIsXG4gIFwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wXCI6IDE3OTA1Njg1OTFcbn0iCn0=
